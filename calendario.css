@@ -1,104 +1,150 @@
-body {
-	background: #ccc;
-	font: 87.5%/1.5em 'Lato', sans-serif;
-	margin: 0;
-}
+html, body { margin: 0; padding: 0; }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  font-family: Georgia, Times, serif;
+}
+
+th {
+  border: 1px solid #A8A8A8;
+  vertical-align: top;
 }
 
 td {
-	padding: 0;
+  height: 150px;
+  width: 150px;
+  padding: 10px;
+  border: 1px solid #A8A8A8;
+  vertical-align: top;
 }
 
-.container {
-  left: 50%;
-  position: fixed;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.divcalendar {
+  padding: 15px;
+   
+    /*background-color: #FFCC00;*/
 }
 
-.calendar-container {
-	position: relative;
-	width: 450px;
+/* Wrapper div. That makes the inner div into an inline element that can be centered with text-align.*/
+#calendaroverallcontrols {
+  text-align: center;
 }
 
-.calendar-container header {
-	border-radius: 1em 1em 0 0;
-	background: #e66b6b;
-	color: #fff;
-	padding: 3em 2em;
+/* This is a fluid div as width will be changing */
+#calendarmonthcontrols {
+  display: inline-block;
+  /*background-color: #FF0000;*/
 }
 
-.day {
-	font-size: 8em;
-	font-weight: 900;
-	line-height: 1em;
+#calendarmonthcontrols > div, #calendarmonthcontrols > a {
+    display: inline-block;
+}    
+
+#btnPrevYr {
+  text-decoration: none;
+  font-size: 35px;
+  vertical-align: middle;
+  /*background: #00FFCC;*/      
 }
 
-.month {
-	font-size: 4em;
-	line-height: 1em;
-	text-transform: lowercase;
+#btnPrev {
+  text-decoration: none;
+  font-size: 35px;
+  margin-left: 20px;
+  vertical-align: middle;
+  /*background: #00FFCC;*/
+}    
+
+/*.yearspan {
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
-.calendar {
-	background: #fff;
-	border-radius: 0 0 1em 1em;
-	-webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
-	box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
-	color: #555;
-	display: inline-block;
-	padding: 2em;
+.monthspan {
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+}*/
+
+#monthandyearspan {
+  width: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-right: 20px;
+  vertical-align: middle;
+  /*background: #00FFCC;*/
+}    
+
+#monthandyear {
+  vertical-align: middle;
 }
 
-.calendar thead {
-	color: #e66b6b;
-	font-weight: 700;
-	text-transform: uppercase;
+#btnNext {
+  text-decoration: none;
+  font-size: 35px;
+  margin-right: 20px;
+  vertical-align: middle;
+  /*background: #00FFCC;*/
 }
 
-.calendar td {
-	padding: .5em 1em;
-	text-align: center;
+#btnNextYr {
+  text-decoration: none;
+  font-size: 35px;
+  vertical-align: middle;
+  /*background: #00FFCC;*/
+}        
+
+#divcalendartable {
+  clear: both;
 }
 
-.calendar tbody td:hover {
-	background: #cacaca;
-	color: #fff;
+.daysheader {
+  background: #C0C0C0;
+  height: auto;
+  text-align: center;
 }
 
-.current-day {
-	color: #e66b6b;
+#prevmonthdates {
+  background-color: #E0E0E0;
 }
 
-.prev-month,
-.next-month {
-	color: #cacaca;
+#nextmonthdates {
+  background-color: #E0E0E0;
 }
 
-.ring-left,
-.ring-right {
-	position: absolute;
-	top: 230px;
+#currentmonthdates {
+  background-color: #FFFFFF;
 }
 
-.ring-left { left: 2em; }
-.ring-right { right: 2em; }
+#cellvaluespan {
+  background: #FF0000;
+}
 
-.ring-left:before,
-.ring-left:after,
-.ring-right:before,
-.ring-right:after {
-	background: #fff;
-	border-radius: 4px;
-	-webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
-	box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
-	content: "";
-	display: inline-block;
-	margin: 8px;
-	height: 32px;
-	width: 8px;
+#cellvaluelist {
+  background: #FFCC00;
+}        
+
+.swim {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 80%;
+  text-align: center;
+  background: #445511;
+  color: #F5F5F5;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.chrono {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 80%;
+  text-align: center;
+  background: #778899;
+  color: #F5F5F5;
+  margin-bottom: 5px;
+  padding: 5px;
 }
